@@ -5,8 +5,9 @@ export default function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Welcome to My Coffees!</h1>
-        <p>Discover the best coffee blends from around the world.</p>
+      <p>Discover the best coffee blends from around the world.</p>
+        <h1>My Coffees!</h1>
+        
       </div>
       
     </section>

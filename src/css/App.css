@@ -1,6 +1,8 @@
 .container {
   width: 100%;
-  min-height: 100vh;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -37,11 +39,10 @@
   color: #666666;
 }
 .header h1 {
-  font-family: 'Montserrat', sans-serif; /* ou outra fonte */
-  font-size: 1.8rem;                     /* reduz o tamanho do título */
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1.8rem;            
   color: #000000;
   margin: 0;     
-                         /* remove margin default do h1 */
 }
 .logo {
   height: 6em;
