@@ -1,0 +1,131 @@
+.products-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #2c1810;
+  letter-spacing: -0.02em;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.coffee-1 {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #D2691E 100%);
+}
+
+.coffee-2 {
+  background: linear-gradient(135deg, #654321 0%, #8B4513 50%, #A0522D 100%);
+}
+
+.coffee-3 {
+  background: linear-gradient(135deg, #2F1B14 0%, #654321 50%, #8B4513 100%);
+}
+
+.image-text {
+  color: white;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.product-info {
+  padding: 30px;
+}
+
+.product-info h3 {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c1810;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.product-info p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8B4513;
+  text-align: center;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #f5f1eb 0%, #e8dcc6 100%);
+  border-radius: 8px;
+  border: 2px solid #d4c4a8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .products-section {
+    padding: 60px 20px;
+  }
+}

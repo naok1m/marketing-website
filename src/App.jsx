@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './css/App.css'
 import Header from './components/header'
 import HeroSection from './components/heroSection'
+import ProductsSection from './components/productsSection'
 import './css/index.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div className='container'>
     <HeroSection></HeroSection>
     </div>
+    <ProductsSection />
     </>
   )
 }

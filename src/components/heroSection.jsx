@@ -5,9 +5,9 @@ export default function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-content">
-      <p>Discover the best coffee blends from around the world.</p>
-        <h1>My Coffees!</h1>
-        
+        <h1>My Coffee!</h1>
+        <p>Discover the best coffee blends from around the world.</p>
+        <button className="cta-button">Get Started</button>
       </div>
       
     </section>
