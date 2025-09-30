@@ -1,6 +1,11 @@
 .products-section {
   padding: 80px 20px;
-  background-color: #ffffff;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9)),
+    url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   width: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -19,6 +24,81 @@
   margin-bottom: 60px;
   color: #2c1810;
   letter-spacing: -0.02em;
+}
+
+.category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-btn {
+  background-color: #f5f1eb;
+  color: #8B4513;
+  border: 2px solid #d4c4a8;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-btn:hover {
+  background-color: #e8dcc6;
+  border-color: #8B4513;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: #8B4513;
+  color: white;
+  border-color: #8B4513;
+}
+
+.filter-btn:focus {
+  outline: 3px solid #FFD700;
+  outline-offset: 2px;
+}
+
+.product-details {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #8B4513;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #2c1810;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.detail-value {
+  color: #666666;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .products-grid {
@@ -77,15 +157,27 @@
 }
 
 .coffee-1 {
-  background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #D2691E 100%);
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
 }
 
 .coffee-2 {
-  background: linear-gradient(135deg, #654321 0%, #8B4513 50%, #A0522D 100%);
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2061&q=80');
+  background-size: cover;
+  background-position: center;
 }
 
 .coffee-3 {
-  background: linear-gradient(135deg, #2F1B14 0%, #654321 50%, #8B4513 100%);
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
 }
 
 .image-text {
@@ -93,7 +185,7 @@
   font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.5px;
 }
 
@@ -150,6 +242,10 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .products-section {
+    background-attachment: scroll;
+  }
+  
   .products-grid {
     grid-template-columns: 1fr;
     gap: 30px;

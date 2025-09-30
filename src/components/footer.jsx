@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../css/Footer.css';
 
 export default function Footer() {
@@ -14,9 +15,9 @@ export default function Footer() {
             <h4>Links Rápidos</h4>
             <nav aria-label="Links do rodapé">
               <ul>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><Link to="/produtos">Produtos</Link></li>
+                <li><Link to="/sobre">Sobre</Link></li>
+                <li><Link to="/contato">Contato</Link></li>
               </ul>
             </nav>
           </div>
@@ -27,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 My Coffee. Todos os direitos reservados.</p>
+          <p>&copy; 2025 My Coffee. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

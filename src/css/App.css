@@ -93,6 +93,14 @@ main {
   outline-offset: 2px !important;
   background-color: #8B4513 !important;
 }
+
+/* Estilo para link ativo */
+.nav-left ul li a.active,
+.nav-right ul li a.active {
+  color: #8B4513 !important;
+  background-color: rgba(139, 69, 19, 0.1) !important;
+  font-weight: 600 !important;
+}
 .header h1 {
   font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
   font-size: 1.8rem;
