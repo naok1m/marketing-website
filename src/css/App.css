@@ -5,16 +5,25 @@
   padding: 0;
 }
 
+main {
+  min-height: calc(100vh - 80px);
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
   background-color: #ffffff;
   color: #000000;
   border-bottom: 2px solid #535353;
   width: 100%;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .nav-left {
@@ -27,19 +36,62 @@
 
 .nav-left ul li a,
 .nav-right ul li a {
-  padding: 8px 12px;
+  padding: 12px 16px;
   text-decoration: none;
   color: #000000;
   font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: -0.005em;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  display: inline-block;
+  min-height: 44px; /* Melhoria de acessibilidade - área de toque mínima */
+  display: flex;
+  align-items: center;
+  outline: none;
 }
 
 .nav-left ul li a:hover,
 .nav-right ul li a:hover {
-  color: #666666;
+  color: #8B4513;
+  background-color: rgba(139, 69, 19, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-left ul li a:focus,
+.nav-right ul li a:focus {
+  outline: 2px solid #8B4513;
+  outline-offset: 2px;
+  background-color: rgba(139, 69, 19, 0.1);
+}
+
+.nav-left ul li a:active,
+.nav-right ul li a:active {
+  transform: translateY(0);
+}
+
+/* Estilo especial para o link CTA de compra */
+.cta-nav {
+  background-color: #8B4513 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  padding: 10px 20px !important;
+  text-decoration: none !important;
+}
+
+.cta-nav:hover {
+  background-color: #A0522D !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3) !important;
+}
+
+.cta-nav:focus {
+  outline: 2px solid #FFD700 !important;
+  outline-offset: 2px !important;
+  background-color: #8B4513 !important;
 }
 .header h1 {
   font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
@@ -66,4 +118,53 @@
 
 .read-the-docs {
   color: #ffffff;
+}
+
+/* Responsividade do header */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 15px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .nav-left,
+  .nav-right {
+    justify-self: center;
+  }
+  
+  .nav-left ul,
+  .nav-right ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    order: -1;
+  }
+  
+  .nav-left ul li a,
+  .nav-right ul li a {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 10px;
+  }
+  
+  .header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .nav-left ul li a,
+  .nav-right ul li a {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
 }

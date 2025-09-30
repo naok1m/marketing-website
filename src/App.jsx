@@ -5,17 +5,21 @@ import './css/App.css'
 import Header from './components/header'
 import HeroSection from './components/heroSection'
 import ProductsSection from './components/productsSection'
+import Footer from './components/footer'
 import './css/index.css'
 
 function App() {
   return (
-    <>
-    <Header />
-    <div className='container'>
-    <HeroSection></HeroSection>
+    <div className="app">
+      <Header />
+      <main>
+        <div className='container'>
+          <HeroSection />
+        </div>
+        <ProductsSection />
+      </main>
+      <Footer />
     </div>
-    <ProductsSection />
-    </>
   )
 }
 
